@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>ITSI Webapp</title>
+    <style>
+        body { font-family: monospace; background: #1a1a2e; color: #e0e0e0; max-width: 700px; margin: 40px auto; padding: 20px; }
+        h1 { color: #e94560; }
+        .story { background: #16213e; padding: 20px; border-radius: 8px; border-left: 4px solid #e94560; margin: 20px 0; }
+        a { color: #0f3460; background: #e94560; padding: 8px 16px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 5px 0; }
+        a:hover { background: #c73e54; }
+        code { background: #0f3460; padding: 2px 6px; border-radius: 3px; }
+	 .form-container {
+    max-width:320px;
+    width: 100%;
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+    background: transparent;
+    border-radius: 30px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+ }
+ .form-header {
+    text-align: center;
+    margin-bottom: 25px;
+    width: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+ }
+ .input-container {
+    position: relative;
+    margin-bottom: 20px;
+ }
+ .input-container input {
+    padding:15px 20px ;
+    width: 275px;
+    border-radius: 30px;
+    border: 0px solid white;
+    box-shadow: 0 0 5px black;
+    margin-bottom: 20px;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+    color: grey;
+ }
+ .input-container input:hover{
+    border: 2px solid rgba(0, 0, 0, 0.304);
+ }
+ input::placeholder {
+    color: white;
+    font-size: 0.8rem;
+ }
+ .submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    border: 0px solid ;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.804); */
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+    background: white;
+    cursor: pointer;
+ }
+ .submit:hover {
+    box-shadow: 0 0 9px rgba(255, 255, 255, 0.662);
+ }
+    </style>
+</head>
+<body>
+	<h1> ITSI Webapp </h1>
+	<form action="/login" method="post">
+	<div class="form-container">
+        <div class="form-header">
+            <h3>Log In</h3>
+        </div>
+        <div class="input-container">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name="password" placeholder="password" required>
+        <div class="botton">
+            <button class="submit" type="submit">LOG IN</button>
+        </div>
+    	</div>
+    	</div>
+	</form>
+</body>
+</html>

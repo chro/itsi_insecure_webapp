@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>ITSI Webapp</title>
+    <style>
+        body { font-family: monospace; background: #1a1a2e; color: #e0e0e0; max-width: 700px; margin: 40px auto; padding: 20px; }
+        h1 { color: #e94560; }
+        .story { background: #16213e; padding: 20px; border-radius: 8px; border-left: 4px solid #e94560; margin: 20px 0; }
+        a { color: #0f3460; background: #e94560; padding: 8px 16px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 5px 0; }
+        a:hover { background: #c73e54; }
+        code { background: #0f3460; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <!-- Security note: RSA verification uses the public key. Algorithm: RS256. Backup: HS256 for legacy clients -->
+    <h1>ITSI Webapp</h1>
+    <p> Du hast dich erfolgreich angemeldet.
+    </p>
+    <div class="story">
+        <p><em>
+		Benutzername: {{username}} <br>
+		Rolle: {{role}}
+</em></p>
+    </div>
+    <p>N&auml;chste Aufgabe: &Ouml;ffne den Tresor</p>
+    <p><a href="/vault">Zum Tresor</a></p>
+    <p><a href="/public.pem">Oeffentlicher Schluessel (PEM)</a></p>
+    <p><a href="/.well-known/jwks.json">JWKS Endpoint</a></p>
+    <p><a href="/logout">Abmelden</a></p>
+</body>
+</html>
