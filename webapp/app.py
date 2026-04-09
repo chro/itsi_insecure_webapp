@@ -129,6 +129,7 @@ def public_pem():
 @app.route("/vault")
 def vault():
 
+    FLAG = os.getenv('FLAG')
     token = request.cookies.get("token")
     if not token:
         return "<h2>Kein Token gefunden</h2><p><a href='/'>Zurueck</a></p>", 401
@@ -142,7 +143,7 @@ def vault():
     resp.headers["X-Supported-Algs"] = "RS256, HS256"
 
     if payload.get("role") == "admin":
-        return f"<h1>Tresor geoeffnet!</h1><p>Geschafft!</p>"
+        return f"<h1>Tresor geoeffnet!</h1><p>Flag: {FLAG}</p>"
 
     return (
         f"<h2>Zugang verweigert</h2>"
