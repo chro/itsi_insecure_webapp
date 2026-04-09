@@ -1,0 +1,11 @@
+services:
+  webapp:
+    env_file: .env
+    build: ./webapp
+    container_name: webapp
+    ports:
+      - "5001:5001"
+    environment:
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+
